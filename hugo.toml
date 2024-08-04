@@ -1,0 +1,19 @@
+baseURL = 'https://blog.ynots.dev/'
+languageCode = 'en-us'
+title = 'Ynot Dev'
+disableKinds = ["RSS"]
+
+[module]
+[module.hugoVersion]
+extended = false
+min = "0.116.0"
+
+[[menus.main]]
+name = 'Home'
+pageRef = 'https://ynots.dev/'
+weight = 10
+
+[[menus.main]]
+name = 'Blog'
+pageRef = '/'
+weight = 20
