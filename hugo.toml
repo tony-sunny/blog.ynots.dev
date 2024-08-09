@@ -1,7 +1,7 @@
 baseURL = 'https://blog.ynots.dev/'
 languageCode = 'en-us'
 title = 'Ynot Dev'
-disableKinds = ["RSS"]
+disableKinds = ["RSS","taxonomy", "section"]
 disableHugoGeneratorInject = true
 enableGitInfo = true
 disableLiveReload = true

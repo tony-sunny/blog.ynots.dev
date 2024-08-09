@@ -11,5 +11,5 @@ Published: <time datetime="{{- $datePublishedMachine }}">{{- $datePublishedHuman
     Last Modified: <time datetime="{{- $dateModifiedMachine }}">{{- $dateModifiedHuman }}</time>
 {{- end }}
 
-{{ .Content -}} {{- partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+{{ .Content -}}
 {{- end }}
