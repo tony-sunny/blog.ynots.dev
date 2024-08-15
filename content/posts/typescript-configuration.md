@@ -30,5 +30,5 @@ The below config is for node js projects.
 Refer [tsconfig](https://www.typescriptlang.org/tsconfig/) for more details.
 
 For [target](https://www.typescriptlang.org/tsconfig/#target), refer below github repo
-for suggested bases for each node js version.
+for suggested bases for each node js version. \
 https://github.com/tsconfig/bases/tree/main/bases
