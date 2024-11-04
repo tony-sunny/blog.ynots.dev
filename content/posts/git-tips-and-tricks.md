@@ -23,4 +23,20 @@ And before merging, we can squash the fixup commits and keep a clean history by
 git rebase --autosquash --interactive <commit_id_or_branch_name>
 ```
 
-The last argument must be a commit id before all the fix up commits. If you are following feature branch based development flow, the easy thing to do is provide the target branch name where you want to merge the changes to as athe last argument.
+The last argument must be a commit id before all the fix up commits. If you are following feature branch based development flow, the easy thing to do is provide the target branch name where you want to merge the changes as the last argument.
+
+## Cherry pick
+
+Use `-x` option to append which commit was cherry-picked to commit message. \
+https://git-scm.com/docs/git-cherry-pick#Documentation/git-cherry-pick.txt--x
+
+
+## Stacked PRs/branches
+
+Use `git rebase --update-refs` from the top of stack to rebase all branches. \
+https://andrewlock.net/working-with-stacked-branches-in-git-is-easier-with-update-refs/
+
+## Checking conflict markers
+
+`git diff --check` will check if there is any conflict markers or trailing whitespaces and exit with error if present. This is useful to put as a pre commit/pre push check to prevent merging unresolved conflicts. \
+Refer [documentation](https://git-scm.com/docs/git-diff#Documentation/git-diff.txt---check) fro more details.
