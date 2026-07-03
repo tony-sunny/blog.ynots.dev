@@ -2,12 +2,37 @@
 
 <h1>{{ .Title }}</h1>
 
-{{- range site.RegularPages.ByPublishDate.Reverse  }}
+{{- if eq .Kind "taxonomy" }}
+
+<ul class="tag-list">
+  {{- range .Pages.ByTitle }}
+  <li><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a> ({{ len .Pages }})</li>
+  {{- end }}
+</ul>
+
+{{- else }}
+
+{{- $pages := cond (eq .Kind "term") .Pages site.RegularPages }}
+{{- $paginator := .Paginate $pages.ByPublishDate.Reverse }}
+{{- range $paginator.Pages }}
 
 <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
 {{ .Summary }}
 
 {{- end }}
 
+{{- if gt $paginator.TotalPages 1 }}
+<nav class="pager">
+  {{- if $paginator.HasPrev }}
+  <a href="{{ $paginator.Prev.URL }}">← Newer</a>
+  {{- end }}
+  <span class="pager-status">Page {{ $paginator.PageNumber }} of {{ $paginator.TotalPages }}</span>
+  {{- if $paginator.HasNext }}
+  <a href="{{ $paginator.Next.URL }}">Older →</a>
+  {{- end }}
+</nav>
+{{- end }}
+
+{{- end }}
 
 {{- end }}

@@ -12,4 +12,13 @@ Published: <time datetime="{{- $datePublishedMachine }}">{{- $datePublishedHuman
 {{- end }}
 
 {{ .Content -}}
+
+{{- with .GetTerms "tags" }}
+<p class="tags">
+  {{- range . }}
+  <a href="{{ .RelPermalink }}">#{{ .LinkTitle }}</a>
+  {{- end }}
+</p>
+{{- end }}
+
 {{- end }}

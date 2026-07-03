@@ -1,10 +1,12 @@
 +++
-title = 'Typescript Configuration'
+title = 'TypeScript Configuration'
 date = 2024-08-04T16:45:12+05:30
+lastmod = 2024-08-04T16:45:12+05:30
 draft = false
+tags = ['typescript']
 +++
 
-There are a lot of options to tweak typescript behavior. \
+There are a lot of options to tweak TypeScript behavior. \
 These are the options that I have found very useful.
 <!--more-->
 

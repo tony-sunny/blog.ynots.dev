@@ -132,6 +132,51 @@ time {
   font-size: 0.85rem;
 }
 
+.tags {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}
+
+.tags a {
+  background: var(--code-bg);
+  border-bottom: none;
+  border-radius: 999px;
+  color: var(--muted);
+  display: inline-block;
+  margin: 0 0.4rem 0.4rem 0;
+  padding: 0.25rem 0.75rem;
+}
+
+.tags a:hover {
+  color: var(--accent);
+}
+
+.tag-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tag-list li {
+  margin: 0.5rem 0;
+}
+
+.pager {
+  align-items: center;
+  border-top: 1px solid var(--border);
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 0.85rem;
+  justify-content: space-between;
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+}
+
+.pager-status {
+  color: var(--muted);
+}
+
 blockquote {
   border-left: 3px solid var(--accent);
   color: var(--muted);
