@@ -13,7 +13,7 @@ But if we do it that way, you have to push an entirely new set of commits and if
 
 Instead, what we can do is make changes and and commit the fix separately by
 ```sh
-git commit --fixup=<commit-id-where-the-fix-is-needed>
+git commit --fixup <commit-id-where-the-fix-is-needed>
 ```
 
 Now you can push these fixup commits separately and reviewers can just review the fix only.
