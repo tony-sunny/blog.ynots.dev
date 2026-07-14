@@ -26,12 +26,9 @@ git rebase --autosquash --interactive <commit_id_or_branch_name>
 
 The last argument must be a commit id before all the fix up commits. If you are following feature branch based development flow, the easy thing to do is provide the target branch name where you want to merge the changes as the last argument.
 
-Since Git 2.32, `--fixup` also accepts `amend:` and `reword:` prefixes:
-```sh
-git commit --fixup=amend:<commit-id> # amend the commit's message and content
-git commit --fixup=reword:<commit-id> # amend only the commit's message, no content changes
-```
-These get squashed the same way with `git rebase --autosquash`.
+> In new versions of Git (v2.55), there is also a  `git history fixup` command, which does the commit fixup and rebase in a single step.
+>
+> Ref: https://git-scm.com/docs/git-history
 
 ## Cherry pick
 
