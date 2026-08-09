@@ -1,7 +1,6 @@
 +++
 title = 'Advanced TypeScript Types'
 date = 2024-09-22T10:13:51+05:30
-lastmod = 2024-09-22T10:13:51+05:30
 draft = false
 tags = ['typescript']
 +++
